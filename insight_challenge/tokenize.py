@@ -1,5 +1,4 @@
 import collections
-import string
 
 import nltk
 
@@ -16,5 +15,5 @@ def word_tokenize(text, tokenizer=_tokenizer):
 
     tokens = tokenizer.tokenize(text)
     # Remove tokens that are just punctuation symbols
-    words = filter(lambda x: x not in string.punctuation, tokens)
+    words = filter(str.isalnum, tokens)
     return map(str.lower, words)
