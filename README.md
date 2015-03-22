@@ -1,5 +1,5 @@
 # insight-data-engineering-challenge
-The solution to the coding challenge for the Insight Data Engineering Program implemented in Python 3.
+The solution to the [coding challenge](https://github.com/InsightDataScience/cc-example) for the [Insight Data Engineering Program](http://insightdataengineering.com/) implemented in Python 3.
 
 ## Task
 
@@ -53,7 +53,11 @@ As a data engineer, it’s important that you write clean, well-documented code 
 
 ## Run programs
 
-Both _Word Count_ and _Running Median_ programs are launched by running _run.sh_ Bash script. The results will appear in the _wc_output_ directory.
+Both _Word Count_ and _Running Median_ programs are launched by running _run.sh_ Bash script:
+
+	./run.sh
+
+The results will be available in the files _wc_output/wc_result.txt_ and _wc_output/med_result.txt_.
 
 To manually run the programs and print the output to STDOUT:
 
