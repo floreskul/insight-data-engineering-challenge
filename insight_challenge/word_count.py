@@ -1,4 +1,3 @@
-import sys
 import os
 import fileinput
 import collections
@@ -13,14 +12,14 @@ def get_file_stream(dir_path):
     '''
     Return a line stream from files in the given directory in alphabetic order
 
-    Any subdirectories are ignored
+    Any subdirectories are ignored.
     '''
 
     files_and_directories = [os.path.join(dir_path, f)
                              for f in os.listdir(dir_path)]
     files = sorted(filter(os.path.isfile, files_and_directories))
-
     file_input = fileinput.FileInput(files)
+    # Just return a FileInput object as it implements the sequence behavior
     return file_input
 
 
