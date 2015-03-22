@@ -1,3 +1,9 @@
+'''
+Calculate and print the running median of the number of words.
+
+The script reads the list of given files line by line and prints the current
+running median value after each line.
+'''
 import sys
 import fileinput
 
@@ -7,7 +13,7 @@ import median
 
 def main():
     # Read the list of files from the command line arguments
-    # and make sure they are ordered in alphabetical order
+    # Make sure they are ordered in alphabetical order
     files = sorted(sys.argv[1:])
     file_input = fileinput.FileInput(files)
 

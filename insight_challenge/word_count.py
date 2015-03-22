@@ -1,3 +1,9 @@
+'''
+Calculate and print the counts of words.
+
+The script reads the given files, extracts words from the text
+and prints total word counts for words ordered alphabetically.
+'''
 import sys
 import fileinput
 import collections
@@ -11,13 +17,13 @@ def main():
     files = sorted(sys.argv[1:])
     file_input = fileinput.FileInput(files)
 
-    # Count frequencies
+    # Count frequencies using a Counter object based on Python's dict
+    # For more memory efficient implementation we may use Trie data structure
     word_counter = collections.Counter()
     for line in file_input:
         for word in tokenize.word_tokenize(line):
             word_counter[word] += 1
 
-    # Print the result
     for word in sorted(word_counter.keys()):
         print ('%s\t%s' % (word, word_counter[word]))
 
