@@ -1,34 +1,22 @@
-import os
+import sys
 import fileinput
 import collections
 
 import tokenize
 
 
-INPUT_DIRECTORY = '../wc_input'
-
-
-def get_file_stream(dir_path):
-    '''
-    Return a line stream from files in the given directory in alphabetic order
-
-    Any subdirectories are ignored.
-    '''
-
-    files_and_directories = [os.path.join(dir_path, f)
-                             for f in os.listdir(dir_path)]
-    files = sorted(filter(os.path.isfile, files_and_directories))
-    file_input = fileinput.FileInput(files)
-    # Just return a FileInput object as it implements the sequence behavior
-    return file_input
-
-
 def main():
-    word_counter = collections.Counter()
+    # Read the list of files from the command line arguments
+    # Make sure they are ordered in alphabetical order
+    files = sorted(sys.argv[1:])
+    file_input = fileinput.FileInput(files)
+
     # Count frequencies
-    for line in get_file_stream(INPUT_DIRECTORY):
+    word_counter = collections.Counter()
+    for line in file_input:
         for word in tokenize.word_tokenize(line):
             word_counter[word] += 1
+
     # Print the result
     for word in sorted(word_counter.keys()):
         print ('%s\t%s' % (word, word_counter[word]))
