@@ -1,5 +1,5 @@
-# insight-data-engineering-code-challenge
-Coding challenge solution for the Insight Data Engineering Program
+# insight-data-engineering-challenge
+The solution to the coding challenge for the Insight Data Engineering Program implemented in Python 3.
 
 ## Task
 
@@ -49,4 +49,30 @@ You may write your solution in any one of the following programming languages: C
 As a data engineer, it’s important that you write clean, well-documented code that scales for large amounts of data.  For this reason, it’s important to ensure that your solution works well for small and large text files, rather than just the simple examples above.
 
 **More details are available in the official repository:** https://github.com/InsightDataScience/cc-example
+
+
+## Run programs
+
+Both _Word Count_ and _Running Median_ programs are launched by running _run.sh_ Bash script. The results will appear in the _wc_output_ directory.
+
+To manually run the programs and print the output to STDOUT:
+
+	python3 insight_challenge/word_count.py <file_1> <file_n>
+	python3 insight_challenge/running_median.py <file_1> <file_n>
+
+
+## Tests
+
+Tests are available in the _tests_ directory. To run them:
+
+	cd tests
+	python3 -m unittest
+
+
+## Dependencies
+
+- Python3
+- NLTK 3.0
+
+The _run.sh_ script automatically installs all dependencies during the first run on OS X or Debian-based Linux operating systems.
 
