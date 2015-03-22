@@ -23,3 +23,11 @@ class TestTokenize(unittest.TestCase):
     def test_task_example(self):
         result = word_tokenize('So call a big meeting,')
         self.assertEqual(list(result), ['so', 'call', 'a', 'big', 'meeting'])
+
+    def test_hyphens(self):
+        result = word_tokenize('hi-lite')
+        self.assertEqual(list(result), ['hilite'])
+
+    def test_conjunctions(self):
+        result = word_tokenize("we're and haven't")
+        self.assertEqual(list(result), ['were', 'and', 'havent'])
