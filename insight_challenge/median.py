@@ -12,7 +12,7 @@ class RunningMedian:
 
     def __init__(self):
         # Implementation is based on two heaps:
-        # min_heap that contains elements <= median
+        # max_heap that contains elements <= median
         # min_heap that contains elements >= median
         # While adding elements to heaps we keep the property that
         # the size of any heap is not larger than the other one by more than 1
