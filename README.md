@@ -51,6 +51,15 @@ As a data engineer, it’s important that you write clean, well-documented code 
 **More details are available in the official repository:** https://github.com/InsightDataScience/cc-example
 
 
+## Word Count
+
+The solution is based on using text tokenization from the [NLTK](http://www.nltk.org/) library with few custom changes to satisfy the requirements from the FAQ section in the official repository. We keep counts of all extracted words by using _collections.Counter_ class from the Python standart library which is a subclass of the built-in _dict_ type. At the end we simply iterate the sorted found words (keys) and print the count for each of them.
+
+## Running Median
+
+The solution is based on using two heaps - a min-heap to store the elements greater or equal than the median and a max-heap to store elements smaller or equal to the median. We maintain the property that the size of any heap is not larger than the other one by more than 1. This gives the opportunity to perform the add operation in _O(log n)_ time and to get median in _O(1)_ time.n
+
+
 ## Run programs
 
 Both _Word Count_ and _Running Median_ programs are launched by running _run.sh_ Bash script:
