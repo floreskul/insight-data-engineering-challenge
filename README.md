@@ -53,7 +53,7 @@ As a data engineer, it’s important that you write clean, well-documented code 
 
 ## Word Count
 
-The solution is based on using text tokenization from the [NLTK](http://www.nltk.org/) library with few custom changes to satisfy the requirements from the FAQ section in the official repository. We keep counts of all extracted words by using _collections.Counter_ class from the Python standart library which is a subclass of the built-in _dict_ type. At the end we simply iterate the sorted found words (keys) and print the count for each of them.
+The solution is based on using text tokenization from the [NLTK](http://www.nltk.org/) library with few custom changes to satisfy the requirements from the FAQ section in the official repository. We keep counts of all extracted words by using _collections.Counter_ class from the Python standard library which is a subclass of the built-in _dict_ type. At the end we simply iterate the sorted found words (keys) and print the count for each of them.
 
 ## Running Median
 
